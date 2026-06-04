@@ -1,4 +1,4 @@
-console.log("JS Loaded");
+//console.log("JS Loaded");
 document.querySelector("form").addEventListener("submit",function(e){
 
     let fname = document.querySelector("input[name='first_name']").value;
@@ -32,8 +32,8 @@ document.querySelector("form").addEventListener("submit",function(e){
         return;
     }
 
-    let dept = document.querySelectorAll("input[name='dept[]']:checked");
-    if(dept.length === 0){
+    let dept = document.querySelector("input[name='dept_id']:checked"); 
+    if(!dept){
         e.preventDefault();
         showPopup("Select atleast one department");
         return;
@@ -42,7 +42,6 @@ document.querySelector("form").addEventListener("submit",function(e){
 
 function showPopup(message) {
     let popup = document.getElementById("popup");
-
     popup.innerText = message;
     popup.classList.add("show");
 
@@ -50,5 +49,3 @@ function showPopup(message) {
         popup.classList.remove("show");
     }, 3000);
 }
-
-showPopup("Registration Successful!", true);

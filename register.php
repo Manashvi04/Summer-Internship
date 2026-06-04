@@ -7,6 +7,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+//Students Table Query
 $roll_no = $_POST['roll_no'];
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
@@ -16,13 +17,8 @@ $contact_no = $_POST['contact_no'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 $gender = isset($_POST['gender']) ? $_POST['gender'] : '';
-
-$department = isset($_POST['dept'])
-    ? implode(",", $_POST['dept'])
-    : '';
-
-$course = $_POST['course'];
-
+$dept_id = $_POST['dept_id'];
+$course_id = $_POST['course_id'];
 $city = $_POST['city'];
 $address = $_POST['add1'];
 
@@ -39,39 +35,14 @@ if(isset($_FILES['photo']) && $_FILES['photo']['error']==0)
 }
 
 $sql = "INSERT INTO students
-(
-roll_no,
-first_name,
-last_name,
-father_name,
-dob,
-contact_no,
-email,
-password,
-gender,
-department,
-course,
-student_photo,
-city,
-address
-)
-VALUES
-(
-'$roll_no',
-'$first_name',
-'$last_name',
-'$father_name',
-'$dob',
-'$contact_no',
-'$email',
-'$password',
-'$gender',
-'$department',
-'$course',
-'$photo',
-'$city',
-'$address'
-)";
+(roll_no,first_name,last_name,father_name,dob,contact_no,email,password,gender,dept_id,course_id,student_photo,city,address)VALUES
+('$roll_no','$first_name','$last_name','$father_name','$dob','$contact_no','$email','$password','$gender','$dept_id','$course_id','$photo','$city','$address')";
+
+//Courses Table Query
+//$sql = "INSERT INTO courses (course_name) VALUES ('AI'),('Data Science'),('Cloud Computing'),('Digital Marketing'),('E-commerce')";
+
+//Departments Table Query
+//$sql = "INSERT INTO departments (dept_name) VALUES ('CSE'),('CE'),('IT'),('Ec'),('Civil'),('Mechanical')";
 
 if(mysqli_query($conn,$sql))
 {

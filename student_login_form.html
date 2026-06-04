@@ -126,22 +126,22 @@
             <br>
 
             <label for="dept">Department:</label>
-            <input type="checkbox" name="dept[]" value="CSE">CSE
-            <input type="checkbox" name="dept[]" value="CE" >CE
-            <input type="checkbox" name="dept[]" value="IT" >IT
-            <input type="checkbox" name="dept[]" value="EC" >EC
-            <input type="checkbox" name="dept[]" value="Civil" >Civil
-            <input type="checkbox" name="dept[]" value="Mechanical" >Mechanical
+            <input type="radio" name="dept_id" value="1">CSE
+            <input type="radio" name="dept_id" value="2" >CE
+            <input type="radio" name="dept_id" value="3" >IT
+            <input type="radio" name="dept_id" value="4" >EC
+            <input type="radio" name="dept_id" value="5" >Civil
+            <input type="radio" name="dept_id" value="6" >Mechanical
             <br>
             <br>
 
             <label for="course">Course:</label>
-            <select name="course" id="course" >
-                <option value="ai">AI</option>
-                <option value="data science">Data Science</option>
-                <option value="cloud">Cloud Computing</option>
-                <option value="dmarketing">Digital Marketing</option>
-                <option value="ecommerce">E-commerce</option>
+            <select name="course_id" id="course" >
+                <option value="1">AI</option>
+                <option value="2">Data Science</option>
+                <option value="3">Cloud Computing</option>
+                <option value="4">Digital Marketing</option>
+                <option value="5">E-commerce</option>
             </select>
             <br>
             <br>
@@ -165,7 +165,7 @@
             <input type="submit" value="Register">
         </form>
     </div>
-    <script src="form.js"></script>
     <div id="popup"></div>
+    <script src="form.js"></script>
 </body>
 </html>
