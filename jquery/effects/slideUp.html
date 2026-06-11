@@ -1,0 +1,35 @@
+<!-- The slideUp() is an inbuilt method in jQuery which is used to hide the selected elements -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <!--jQuery code to show the working of this method-->
+    <script>
+            $(document).ready(function () {
+                $(".btn1").click(function () {
+                    $("p").slideUp();
+                });
+            });
+    </script>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            padding: 20px;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>This paragraph will get hide.</p>
+        <!-- click on this button -->
+        <button class="btn1">Slide up</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!-- The fadeIn() method in jQuery is used to change the opacity of selected elements from hidden to visible. The hidden elements will not be display.  -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>fadeIn() Method in jQuery</title>
+    <style>
+        #Outer {
+            border: 1px solid black;
+            padding-top: 40px;
+            height: 140px;
+            background: green;
+            display: none;
+        }
+    </style>
+</head>
+<body style="text-align:center;">
+    <div id="Outer">
+        <h1 style="color:white;">GeeksForGeeks</h1>
+    </div><br>
+    <button id="btn">
+        Fade In
+    </button>
+<!-- Way 1 -->
+    <!-- <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#Outer").fadeIn(1000);
+            });
+        });
+    </script> -->
+<!-- Way 2 -->
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#Outer").fadeIn("swing");
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!-- The fadeTo() method is an inbuilt method in jQuery that is used to change the opacity of the selected element.  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+        body {
+            width: 40%;
+            height: 100px;
+            border: 2px solid green;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>This paragraph will fade out !</p>
+    <p>This paragraph will not fade !</p>
+    <script>
+        $("p:first").click(function () {
+            $(this).fadeTo("slow", 0.33);
+        });
+    </script>
+</body>
+
+</html>

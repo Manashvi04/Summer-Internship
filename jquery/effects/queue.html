@@ -1,0 +1,66 @@
+<!-- The queue() method is an inbuilt method in jQuery which is used to show the queue of functions to be executed on the selected elements. In a queue one or more function wait for run. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The queue Method</title>
+        <script src=
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        
+        <!-- jQuery code to show the working of this method -->
+        <script>
+            $(document).ready(function() {
+                $("p").click(function() {
+                    var div = $("div");
+     
+                    div.animate({
+                        left: "+=200"
+                    }, 2000);
+                    div.animate({
+                        height: 200
+                    }, "slow");
+                    div.animate({
+                        width: 150
+                    }, "slow");
+                    div.animate({
+                        height: 100
+                    }, "slow");
+                    div.animate({
+                        width: 60
+                    }, "slow");
+                    div.animate({
+                        left: "-=200",
+                        top: "+=100"
+                    }, 2000);
+     
+                    $("span").text(div.queue().length);
+                });
+            });
+        </script>
+        <style>
+            div {
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                left: 35px;
+                margin-top: 10px;
+                background-color: green;
+            }
+             
+            body {
+                width: 500px;
+                height: 250px;
+                border: 2px solid green;
+                padding: 20px;
+            }
+        </style>
+    </head>
+     
+    <body>
+        <p>The queue length is: <span></span></p>
+        
+        <!-- click on above paragraph to show the
+        number of times animation method works -->
+        <div></div>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!-- The show() Method in jQuery is used to display the hidden and selected elements.  -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        jQuery Effect show() Method
+    </title>
+
+    <style>
+        #Outer {
+            border: 1px solid black;
+            padding-top: 40px;
+            height: 140px;
+            background: green;
+            display: none;
+        }
+    </style>
+
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+</head>
+
+<body style="text-align:center;">
+
+    <div id="Outer">
+        <h1 style="color:white;">
+            GeeksForGeeks
+        </h1>
+    </div><br>
+
+    <button id="btn">
+        Show
+    </button>
+
+    <!-- Script to show display:none content -->
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#Outer").show(1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

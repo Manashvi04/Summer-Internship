@@ -1,0 +1,36 @@
+<!-- The finish() is an inbuilt method in jQuery which is used to stop the animations running at the present time. -->
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#b1").click(function() {
+                $("div").animate({
+                    height: 200
+                }, 4000);
+                $("div").animate({
+                    width: 200
+                }, 4000);
+            });
+            $("#b2").click(function() {
+                $("div").finish();
+            });
+        });
+    </script>
+    <style>
+        div {
+            background: green;
+            height: 100px;
+            width: 100px;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <p>
+        <button id="b1">Start </button>
+        <button id="b2">Stop</button>
+    </p> 
+</body>
+</html>

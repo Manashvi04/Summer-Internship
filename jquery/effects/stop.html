@@ -1,0 +1,56 @@
+<!-- The stop() method is an inbuilt method in jQuery which is used to stop the currently running animations for the selected element.  -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> The stop Method</title>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var div = $("div");
+            $("#start").click(function () {
+                div.animate({
+                    height: 280
+                }, "slow");
+                div.animate({
+                    width: 280
+                }, "slow");
+                div.animate({
+                    height: 120
+                }, "slow");
+                div.animate({
+                    width: 120
+                }, "slow");
+            });
+            $("#stop").click(function () {
+                div.stop(true, true);
+            });
+        });
+    </script>
+    <style>
+        div {
+            background: green;
+            height: 100px;
+            width: 100px;
+        }
+
+        button {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- click on this button and 
+        animation will start -->
+    <button id="start">Start </button>
+    <!-- click on this button and 
+        animation will stop -->
+    <button id="stop">Stop </button>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!-- The jQuery hide() method is used to hide selected HTML elements with a smooth animation effect. It reduces the element’s height to zero, effectively making it invisible. The method can also take a duration parameter to control the speed of the hiding animation -->
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script>
+        $(document).ready(function () {
+            $(".b1").click(function () {
+                $("p").hide();
+            });
+        });
+    </script> -->
+
+    <script>
+            $(document).ready(function () {
+                $(".b1").click(function () {
+                    $("p").hide(1000, function () {
+                        alert("Hide() method has finished its working!");
+                    });
+                });
+            });
+    </script>
+    <style>
+        /* div {
+            width: 50%;
+            height: 80px;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid green;
+            font-size: 30px;
+        }
+
+        .b1 {
+            margin: 10px;
+        } */
+
+        p {
+            width: 40%;
+            padding: 20px;
+            height: 50px;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>GeeksforGeeks !.</p>
+    </div>
+    <button class="b1">Click me !</button>
+
+</body>
+
+</html>

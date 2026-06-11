@@ -1,0 +1,73 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Method</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>AJAX METHOD</h1>
+    <h2>DOne by Me</h2>
+    <h3 id="h11"></h3>
+    <button>Click</button>
+
+    <script>
+        $(document).ready(function(){
+            $("li:parent").css("background-color","green");
+        });
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.ajax({
+                    url:"geeks.txt",
+                    success: function(result){
+                        $("#h11").html(result);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery ajax() Method</title>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+</head>
+
+<body style="text-align: center;">
+    <h1 style="color: green;">
+        GeeksForGeeks
+    </h1>
+    <h2>jQuery ajax() Method</h2>
+    <h3 id="h11"></h3>
+    <button>Click</button>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                /* $.ajax({
+                    url: "geeks.txt",
+                    success: function (result) {
+                        $("#h11").html(result);
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+                    } */
+                    $.ajaxSetup({
+                    url: "geek.txt", error: function (xhr) {
+                        alert("Error: " + xhr.status + " " + xhr.statusText);
+                    }
+                });
+                $.ajax();
+            });
+        });
+    </script>
+</body>
+
+</html>

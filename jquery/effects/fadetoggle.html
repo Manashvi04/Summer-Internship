@@ -1,0 +1,35 @@
+<!-- The fadeToggle() Method in jQuery toggles between the fadeIn() and fadeOut() methods. If elements are faded in, fadeToggle() will fade out. If elements are faded out, fadeToggle() will fade in. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery fadeToggle() Method</title>
+    <style>
+        #Outer {
+            border: 1px solid black;
+            padding-top: 40px;
+            height: 140px;
+            background: green;
+            display: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body style="text-align:center;">
+    <div id="Outer">
+        <h1 style="color:white;">
+            GeeksForGeeks
+        </h1>
+    </div><br>
+    <button id="btn">
+        Fade Toggle
+    </button>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#Outer").fadeToggle(3000);
+            });
+        });
+    </script>
+</body>
+
+</html>

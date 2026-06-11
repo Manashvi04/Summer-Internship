@@ -1,0 +1,55 @@
+<!-- The animate() method is an inbuilt method in jQuery which is used to change the state of the element with CSS style. This method can also be used to change the CSS property to create the animated effect for the selected element.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<!-- <script>
+    $(document).ready(function(){
+        $("#b1").click(function(){
+            $("#div").animate({
+                width: "300px"
+            });
+            $("#div").animate({
+                height:"300px"
+            });
+        });
+    });
+</script> -->
+
+<script>
+    $(document).ready(function(){
+        $("#b1").click(function(){
+            $("#div").animate({
+                height:"200px",
+                width:"200px"
+            },{
+                duration:1000,
+                easing:"linear",
+                complete:function(){
+                    $(this).after("<p> Reached maximum height and width</p>");
+                }
+            });
+        });
+    });
+</script>
+<style>
+    div{
+        width: 100px;
+        height:100px;
+        background-color: green;
+        margin-top: 10px;
+    }
+
+    #b1{
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <div id="div"></div>
+    <button id="b1">Click Here</button>
+</body>
+</html>

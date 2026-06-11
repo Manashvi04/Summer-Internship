@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+<!-- blur() is an inbuilt method that is used to remove focus from the selected element. -->
+    <!-- No function -->
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("input").blur();
+                $("p").html(
+                    "This is blur method that is used!!!");
+            });
+        });
+    </script>
+
+    <!-- With function -->
+    <script>
+        $(document).ready(function () {
+            $("input").blur(function () {
+                $(this).css("background-color","#ADFF2F");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    Enter Value:
+    <input type="text" name=""fullname>
+    <br><br>
+
+    <!-- <button id="btn">
+        start blur event!!!
+    </button>
+    <p style="color:green"></p> -->
+</body>
+
+</html>

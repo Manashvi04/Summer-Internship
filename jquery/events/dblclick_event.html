@@ -1,0 +1,59 @@
+<!-- dblclick() is an inbuilt method that is used to trigger the double-click event to occur. This method occurs when the selected element will be double-clicked.  -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Without Fucntion -->
+    <!-- <script>
+        $(document).ready(function () {
+            $("div").click(function () {
+                $("div").dblclick();
+            });
+        });
+    </script> -->
+
+    <!-- With Function -->
+    <script>
+        $(document).ready(function(){
+            $("button").dblclick(function(){
+                $("p").fadeOut();
+            });
+        });
+    </script>
+    <style>
+        /* div {
+            display: block;
+            width: 370px;
+            padding: 10px;
+            font-size: 25px;
+            border: 2px solid green;
+            align-items: center;
+        } */
+
+        p {
+            display: block;
+            padding: 20px;
+            color: green;
+            width: 300px;
+            border: 2px solid green;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Without Fucntion -->
+    <!-- <center>
+        <div ondblclick="alert(
+            'dblclick event has been triggered')">
+            Click me to trigger dblclick event
+        </div>
+    </center> -->
+
+    <!-- With function -->
+    <p>Welcome User</p>
+    <button>Click Me!</button>
+</body>
+
+</html>

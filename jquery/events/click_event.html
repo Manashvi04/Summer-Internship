@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <!-- no function is passed to this method. -->
+    <!-- <script>
+        $(document).ready(function () {
+            $("p").click();
+        });
+    </script> -->
+
+    <!-- Fucntion is passed to method -->
+    <script>
+        $(document).ready(function(){
+            $("p").click(function(){
+                $(this).fadeOut();
+            });
+        });
+    </script>
+
+    <style>
+        p {
+            display: block;
+            width: 300px;
+            padding: 20px;
+            font-size: 30px;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- click on this method -->
+    <!-- <p onclick="alert('paragraph was clicked')">
+        This is a paragraph.
+    </p> -->
+
+    <p>Click inside this block and whole block will disappear..</p>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Example 1: In this example we demonstrates the change() method. When the button is clicked, the input field triggers the change() event, displaying an alert with the input's updated value. -->
+    <!-- <script>
+        $(document).ready(function (){
+            $("button").click(function() {
+                $("input").change();
+            });
+        });
+    </script> -->
+
+<!-- Example 2: In this example we applies the change() method to an input field. When the field value is modified and focus is lost, the input's background color changes to light green (#7FFF00). -->
+    <script>
+        $(document).ready(function (){
+            $(".field").change(function() {
+                $(this).css("background-color","#7FFF00");
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Example 1: In this example we demonstrates the change() method. When the button is clicked, the input field triggers the change() event, displaying an alert with the input's updated value. -->
+    <!-- <p>Click button to see changed value</p>
+    <button>Click Me!</button>
+    <p>Enter Value:
+        <input type="text" value="HelloHiiHelloHii" onchange="alert(this.value)">
+    </p> -->
+    
+    <!-- Example 2: In this example we applies the change() method to an input field. When the field value is modified and focus is lost, the input's background color changes to light green (#7FFF00). -->
+    Enter Value:
+    <input class="field" type="text">
+    <p>
+        Write something in the input field, and then
+        press enter or click outside the field.
+    </p>
+</body>
+</html>

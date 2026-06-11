@@ -1,0 +1,36 @@
+<!-- The dequeue() method is an inbuilt method in jQuery that is used to remove the next function from the queue and then it will execute the function. In a queue there will be several functions waiting to run dequeue() used to remove the top function from the queue and execute that function.  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+        div {
+            margin: 15px 0 0 0;
+            width: 100px;
+            position: absolute;
+            height: 30px;
+            left: 10px;
+            top: 30px;
+            background-color: lightgreen;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>GfG!</div>
+    <button>Click to start !</button>
+    <script>
+        $("button").click(function () {
+            $("div")
+                .animate({ left: "+=500px" }, 1000)
+                .animate({ top: "0px" }, 1000)
+                .queue(function () {
+                    $(this).toggleClass("green").dequeue();
+                })
+                .animate({ left: "50px", top: "150px" }, 1000);
+        });
+    </script>
+</body>
+</html>

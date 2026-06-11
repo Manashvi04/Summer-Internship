@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--bind() method is used to attach one or more event handlers for selected elements. This method specifies a function to run when an event occurs.--> 
+    <!-- without function-->
+    <script>
+        $(document).ready(function () {
+            $(".paragraph").bind("click", function () {
+                alert("Paragraph is Clicked");
+            });
+        });
+    </script>
+
+    <!-- defining function-->
+    <script>
+        function handlerName(e) {
+            alert(e.data.msg);
+        }
+
+        $(document).ready(function () {
+            $(".paragraph").bind("click", {
+                msg: "Paragraph is Clicked."
+            }, handlerName)
+        });
+    </script>
+
+    <style>
+        .paragraph {
+            width: 190px;
+            margin: auto;
+            padding: 20px 40px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <p class="paragraph">Welcome to GeeksforGeeks</p>
+</body>
+</html>
